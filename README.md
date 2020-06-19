@@ -3,7 +3,7 @@ Google Play Music to Spotify Library Migrator
 
 Something I made in a couple of hours to celebrate Spotify's launch in India. The script is able to Migrate GPM library to Spotify. After scouring through nearly half of the internet, the seemingly reliable ways to migrate your library from GPM to Spotify either took $$$ or Credentials to the services I hold near and dear, both of which were a total no go for me anyway. So I quickly cooked up literally the first things I've ever written in python. I don't intend to maintain or update this since it has already served my purpose. But I wouldn't mind doing minor tweaks for a fellow music lover.
 
-# What do these scripts actually do ?
+# What do these scripts actually do?
 
 These scripts use wrappers for Spotify and GPM Web APIs to access and modify your libraries. 
 
@@ -49,10 +49,14 @@ GMusicApi [https://unofficial-google-music-api.readthedocs.io/en/latest/]
 
 4.  Copy the script to local Machine. Go to the previous folder
 	
-        a. Execute "python gpm.py" and follow instructions
+        a. Execute `python gpm.py` and follow instructions
     This should create a file GPMLibraryParsed.txt containing Your GPM library with eachline describing [Artist Song Title]
         
-        b. Execute "python spotify.py" and follow instructions
-    This will import all songs from GPMLibraryParsed.txt, look up each song on Spotify and add the ones it finds to your library. Also it will ask you to provide URL to playlist where it can add all the songs it has added to your library. In my case it looks like this "https://open.spotify.com/playlist/3TXAVQywYUgvhllirL3mqM"
+        b. Execute `python spotify.py` and fill in the prompt with the playlist id as shown below:
+```
+Enter Playlist URL : spotify:playlist:40BcMwHSJljfKTSUGkTLqb
+```
+    This will import all songs from GPMLibraryParsed.txt, by looking up each song on Spotify and add the ones it finds to your playlist.
+
 	   
 That's it. Sit back and enjoy your library being populated! Yay!
