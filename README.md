@@ -1,3 +1,7 @@
+This fork aims at adding:
+1. Playlists
+2. Rate-limitting for large libraries
+
 # gpm2spotify
 Google Play Music to Spotify Library Migrator
 
