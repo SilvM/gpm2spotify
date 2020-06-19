@@ -17,46 +17,39 @@ GMusicApi [https://unofficial-google-music-api.readthedocs.io/en/latest/]
 
 # Instructions
 
-1. 	Download and Install Python from https://www.python.org/downloads/release/python-372/  (x86-64 Installer)
-
-        a. Select Add Python 3.7 to Path Option	
-        b. Select Install Now
-        c. Close the installer
-        d. Open powershell and enter following command
-           python -V
-           If version is displayed we are good to go.
-        e. Update pip
-           python -m pip install --upgrade pip
-	   
-2.  Install Python Libraries required for scripts to work
-        
-        a. pip install spotipy
-        b. pip install gmusicapi
-
-3.	Next we want to register our script as an application on spotify developer account. This will help us use Spotify Web Apis
-
-        a. Goto https://developer.spotify.com/dashboard/
-        b. Log In
-        c. Accept Developer Terms
-        d. Create ClientId
-        e. Input a Name and Description for your app (I Used GPM2Spotify)
-        f. Select "I don't know" in the What are you building section. This doesn't allow you to use this application commercially which isn't our purpose anyway.
-        g. Accept Terms
-        h. Edit Setings
-        i. Add "http://localhost:8080/" to the Redirect URI
-        j. Copy ClientId and ClientSecret to Config.txt
-        k. Goto "https://www.spotify.com/in/account/overview/" Copy Username to Config.txt
-
-4.  Copy the script to local Machine. Go to the previous folder
-	
-        a. Execute `python gpm.py` and follow instructions
-    This should create a file GPMLibraryParsed.txt containing Your GPM library with eachline describing [Artist Song Title]
-        
-        b. Execute `python spotify.py` and fill in the prompt with the playlist id as shown below:
+## Download and Install Python and required libraries
+a. Select Add Python 3.7 to Path Option 
+b. Select Install Now
+c. Close the installer
+d. Open powershell/terminal and enter following command 
 ```
-Enter Playlist URL : spotify:playlist:40BcMwHSJljfKTSUGkTLqb
+python3 -V
 ```
-    This will import all songs from GPMLibraryParsed.txt, by looking up each song on Spotify and add the ones it finds to your playlist.
+e. Update pip3 and install libraries
+```
+python3 -m pip3 install --upgrade pip
+pip3 install spotipy gmusicapi
+```
 
-	   
+## Register a Spotify API client
+a. Goto https://developer.spotify.com/dashboard/
+b. Log In
+c. Accept Developer Terms
+d. Create ClientId
+e. Input a Name and Description for your app (I Used GPM2Spotify)
+g. Accept Terms
+h. Edit Setings
+i. Add "http://localhost:8080/" to the Redirect URI and click "Add"
+j. Copy ClientId and ClientSecret to Config.txt
+k. Goto "https://www.spotify.com/in/account/overview/" Copy Username to Config.txt
+
+## Execution    
+a. Execute `python3 gpm.py` and follow instructions. This should create a file GPMLibraryParsed.txt containing Your GPM library with eachline describing [Artist Song Title]
+b. Execute `python3 spotify.py` and fill in the prompt with the playlist id as shown below:
+
+    ```
+    Enter Playlist URL : spotify:playlist:40BcMwHSJljfKTSUGkTLqb
+    ```
+
+This will import all songs from GPMLibraryParsed.txt, by looking up each song on Spotify and add the ones it finds to your playlist.
 That's it. Sit back and enjoy your library being populated! Yay!
